@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView tv_info;
     private Button b_yes, b_higher, b_lower, b_ok;
     private int tries = 0;
-    private  int left = 0, right = 1000;
+    private int left = 0, right = 1000;
     private int mid;
 
     @Override
@@ -37,6 +37,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                b_yes.setVisibility(View.VISIBLE);
+                b_lower.setVisibility(View.VISIBLE);
+                b_higher.setVisibility(View.VISIBLE);
+                b_ok.setVisibility(View.INVISIBLE);
+
+                guess();
             }
         });
 
@@ -44,7 +50,18 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
+                tv_info.setText("Wow! I guessed in " + tries + " moves. AWESOME!!!");
 
+                b_yes.setVisibility(View.INVISIBLE);
+                b_lower.setVisibility(View.INVISIBLE);
+                b_higher.setVisibility(View.INVISIBLE);
+                b_ok.setVisibility(View.VISIBLE);
+
+                b_ok.setText("New Game");
+
+                tries = 0;
+                left = 1;
+                right = 1000;
             }
         });
 
@@ -53,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                left = mid + 1;
+                guess();
             }
         });
 
@@ -61,7 +80,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                right = mid - 1;
+                guess();
             }
         });
+    }
+
+    private void guess() {
+        mid = (left + right) / 2;
+        tries++;
+        tv_info.setText("My guess is " + mid);
     }
 }
