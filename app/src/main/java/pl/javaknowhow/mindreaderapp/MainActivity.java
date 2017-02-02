@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         b_lower.setVisibility(View.INVISIBLE);
         b_higher.setVisibility(View.INVISIBLE);
 
-        tv_info.setText("Think of the number betwen 1 and 1000 and I'll guess it under 10 moves");
+        tv_info.setText(R.string.thinkOfNumber);
 
         b_ok.setOnClickListener(new View.OnClickListener() {
 
@@ -50,14 +50,14 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                tv_info.setText("Wow! I guessed in " + tries + " moves. AWESOME!!!");
+                tv_info.setText(getString(R.string.wow) + tries + getString(R.string.awesome));
 
                 b_yes.setVisibility(View.INVISIBLE);
                 b_lower.setVisibility(View.INVISIBLE);
                 b_higher.setVisibility(View.INVISIBLE);
                 b_ok.setVisibility(View.VISIBLE);
 
-                b_ok.setText("New Game");
+                b_ok.setText(R.string.newGame);
 
                 tries = 0;
                 left = 1;

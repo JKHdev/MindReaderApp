@@ -11,43 +11,51 @@
     tools:context="pl.javaknowhow.mindreaderapp.MainActivity">
 
     <TextView
-        android:text="TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_alignParentTop="true"
         android:id="@+id/tv_info"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp" />
 
     <Button
-        android:text="YES"
+        android:text="@string/yes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/b_yes" />
+        android:id="@+id/b_yes"
+        style="@style/Widget.AppCompat.Button.Colored" />
 
     <Button
-        android:text="Higher"
+        android:text="@string/higher"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/b_yes"
         android:layout_centerHorizontal="true"
-        android:id="@+id/b_higher" />
+        android:id="@+id/b_higher"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:background="@color/colorPrimary" />
 
     <Button
-        android:text="Lower"
+        android:text="@string/lower"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/b_yes"
         android:layout_centerHorizontal="true"
-        android:id="@+id/b_lower" />
+        android:id="@+id/b_lower"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:background="@color/colorPrimary" />
 
     <Button
-        android:text="OK"
+        android:text="@string/ok"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/b_ok" />
+        android:id="@+id/b_ok"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:background="?attr/colorAccent" />
 </RelativeLayout>
