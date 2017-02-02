@@ -11,7 +11,42 @@
     tools:context="pl.javaknowhow.mindreaderapp.MainActivity">
 
     <TextView
+        android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/tv_info" />
+
+    <Button
+        android:text="YES"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/b_yes" />
+
+    <Button
+        android:text="Higher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/b_yes"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/b_higher" />
+
+    <Button
+        android:text="Lower"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/b_yes"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/b_lower" />
+
+    <Button
+        android:text="OK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/b_ok" />
 </RelativeLayout>
